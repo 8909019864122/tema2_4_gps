@@ -14,25 +14,13 @@
   </head>
 
   <body>
-    <a-scene
-      arjs
-      embedded
-      renderer="logarithmicDepthBuffer: true;"
-      vr-mode-ui="enabled: false"
-      gesture-detector
-      id="scene"
-    >
+   
+<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+    <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
+    <a-entity material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: <56.886995>; longitude: <60.586742>" scale="10 10 10"></a-entity>
+</a-scene>
 
-  <a-marker
-    type="pattern"
-    url="p.patt"
-    raycaster="objects: .clickable"
-    emitevents="true"
-    cursor="fuse: false; rayOrigin: mouse;"
-    id="markerA"
-  >
-  
-  </a-marker>
+
 
       <a-entity camera></a-entity>
     </a-scene>
